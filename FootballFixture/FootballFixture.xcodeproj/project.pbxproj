@@ -1,0 +1,572 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		58CCF1FB2D5EBC3200BFC8B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58CCF1DC2D5EBC2E00BFC8B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58CCF1E32D5EBC2E00BFC8B0;
+			remoteInfo = FootballFixture;
+		};
+		58CCF2052D5EBC3200BFC8B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58CCF1DC2D5EBC2E00BFC8B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58CCF1E32D5EBC2E00BFC8B0;
+			remoteInfo = FootballFixture;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		58CCF1E42D5EBC2E00BFC8B0 /* FootballFixture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballFixture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		58CCF1FA2D5EBC3200BFC8B0 /* FootballFixtureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballFixtureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		58CCF2042D5EBC3200BFC8B0 /* FootballFixtureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballFixtureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		58CCF20C2D5EBC3200BFC8B0 /* Exceptions for "FootballFixture" folder in "FootballFixture" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 58CCF1E32D5EBC2E00BFC8B0 /* FootballFixture */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		58CCF1E62D5EBC2E00BFC8B0 /* FootballFixture */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				58CCF20C2D5EBC3200BFC8B0 /* Exceptions for "FootballFixture" folder in "FootballFixture" target */,
+			);
+			path = FootballFixture;
+			sourceTree = "<group>";
+		};
+		58CCF1FD2D5EBC3200BFC8B0 /* FootballFixtureTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = FootballFixtureTests;
+			sourceTree = "<group>";
+		};
+		58CCF2072D5EBC3200BFC8B0 /* FootballFixtureUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = FootballFixtureUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		58CCF1E12D5EBC2E00BFC8B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58CCF1F72D5EBC3200BFC8B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58CCF2012D5EBC3200BFC8B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		58CCF1DB2D5EBC2E00BFC8B0 = {
+			isa = PBXGroup;
+			children = (
+				58CCF1E62D5EBC2E00BFC8B0 /* FootballFixture */,
+				58CCF1FD2D5EBC3200BFC8B0 /* FootballFixtureTests */,
+				58CCF2072D5EBC3200BFC8B0 /* FootballFixtureUITests */,
+				58CCF1E52D5EBC2E00BFC8B0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		58CCF1E52D5EBC2E00BFC8B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				58CCF1E42D5EBC2E00BFC8B0 /* FootballFixture.app */,
+				58CCF1FA2D5EBC3200BFC8B0 /* FootballFixtureTests.xctest */,
+				58CCF2042D5EBC3200BFC8B0 /* FootballFixtureUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		58CCF1E32D5EBC2E00BFC8B0 /* FootballFixture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58CCF20D2D5EBC3200BFC8B0 /* Build configuration list for PBXNativeTarget "FootballFixture" */;
+			buildPhases = (
+				58CCF1E02D5EBC2E00BFC8B0 /* Sources */,
+				58CCF1E12D5EBC2E00BFC8B0 /* Frameworks */,
+				58CCF1E22D5EBC2E00BFC8B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				58CCF1E62D5EBC2E00BFC8B0 /* FootballFixture */,
+			);
+			name = FootballFixture;
+			packageProductDependencies = (
+			);
+			productName = FootballFixture;
+			productReference = 58CCF1E42D5EBC2E00BFC8B0 /* FootballFixture.app */;
+			productType = "com.apple.product-type.application";
+		};
+		58CCF1F92D5EBC3200BFC8B0 /* FootballFixtureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58CCF2122D5EBC3200BFC8B0 /* Build configuration list for PBXNativeTarget "FootballFixtureTests" */;
+			buildPhases = (
+				58CCF1F62D5EBC3200BFC8B0 /* Sources */,
+				58CCF1F72D5EBC3200BFC8B0 /* Frameworks */,
+				58CCF1F82D5EBC3200BFC8B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58CCF1FC2D5EBC3200BFC8B0 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				58CCF1FD2D5EBC3200BFC8B0 /* FootballFixtureTests */,
+			);
+			name = FootballFixtureTests;
+			packageProductDependencies = (
+			);
+			productName = FootballFixtureTests;
+			productReference = 58CCF1FA2D5EBC3200BFC8B0 /* FootballFixtureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		58CCF2032D5EBC3200BFC8B0 /* FootballFixtureUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58CCF2152D5EBC3200BFC8B0 /* Build configuration list for PBXNativeTarget "FootballFixtureUITests" */;
+			buildPhases = (
+				58CCF2002D5EBC3200BFC8B0 /* Sources */,
+				58CCF2012D5EBC3200BFC8B0 /* Frameworks */,
+				58CCF2022D5EBC3200BFC8B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58CCF2062D5EBC3200BFC8B0 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				58CCF2072D5EBC3200BFC8B0 /* FootballFixtureUITests */,
+			);
+			name = FootballFixtureUITests;
+			packageProductDependencies = (
+			);
+			productName = FootballFixtureUITests;
+			productReference = 58CCF2042D5EBC3200BFC8B0 /* FootballFixtureUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		58CCF1DC2D5EBC2E00BFC8B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					58CCF1E32D5EBC2E00BFC8B0 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					58CCF1F92D5EBC3200BFC8B0 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 58CCF1E32D5EBC2E00BFC8B0;
+					};
+					58CCF2032D5EBC3200BFC8B0 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 58CCF1E32D5EBC2E00BFC8B0;
+					};
+				};
+			};
+			buildConfigurationList = 58CCF1DF2D5EBC2E00BFC8B0 /* Build configuration list for PBXProject "FootballFixture" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 58CCF1DB2D5EBC2E00BFC8B0;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 58CCF1E52D5EBC2E00BFC8B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				58CCF1E32D5EBC2E00BFC8B0 /* FootballFixture */,
+				58CCF1F92D5EBC3200BFC8B0 /* FootballFixtureTests */,
+				58CCF2032D5EBC3200BFC8B0 /* FootballFixtureUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		58CCF1E22D5EBC2E00BFC8B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58CCF1F82D5EBC3200BFC8B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58CCF2022D5EBC3200BFC8B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		58CCF1E02D5EBC2E00BFC8B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58CCF1F62D5EBC3200BFC8B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58CCF2002D5EBC3200BFC8B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		58CCF1FC2D5EBC3200BFC8B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58CCF1E32D5EBC2E00BFC8B0 /* FootballFixture */;
+			targetProxy = 58CCF1FB2D5EBC3200BFC8B0 /* PBXContainerItemProxy */;
+		};
+		58CCF2062D5EBC3200BFC8B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58CCF1E32D5EBC2E00BFC8B0 /* FootballFixture */;
+			targetProxy = 58CCF2052D5EBC3200BFC8B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		58CCF20E2D5EBC3200BFC8B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8JM7VY488D;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FootballFixture/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Items.FootballFixture;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		58CCF20F2D5EBC3200BFC8B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8JM7VY488D;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FootballFixture/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Items.FootballFixture;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		58CCF2102D5EBC3200BFC8B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		58CCF2112D5EBC3200BFC8B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		58CCF2132D5EBC3200BFC8B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8JM7VY488D;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Items.FootballFixtureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FootballFixture.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FootballFixture";
+			};
+			name = Debug;
+		};
+		58CCF2142D5EBC3200BFC8B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8JM7VY488D;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Items.FootballFixtureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FootballFixture.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FootballFixture";
+			};
+			name = Release;
+		};
+		58CCF2162D5EBC3200BFC8B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8JM7VY488D;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Items.FootballFixtureUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FootballFixture;
+			};
+			name = Debug;
+		};
+		58CCF2172D5EBC3200BFC8B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8JM7VY488D;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Items.FootballFixtureUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FootballFixture;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		58CCF1DF2D5EBC2E00BFC8B0 /* Build configuration list for PBXProject "FootballFixture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58CCF2102D5EBC3200BFC8B0 /* Debug */,
+				58CCF2112D5EBC3200BFC8B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58CCF20D2D5EBC3200BFC8B0 /* Build configuration list for PBXNativeTarget "FootballFixture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58CCF20E2D5EBC3200BFC8B0 /* Debug */,
+				58CCF20F2D5EBC3200BFC8B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58CCF2122D5EBC3200BFC8B0 /* Build configuration list for PBXNativeTarget "FootballFixtureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58CCF2132D5EBC3200BFC8B0 /* Debug */,
+				58CCF2142D5EBC3200BFC8B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58CCF2152D5EBC3200BFC8B0 /* Build configuration list for PBXNativeTarget "FootballFixtureUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58CCF2162D5EBC3200BFC8B0 /* Debug */,
+				58CCF2172D5EBC3200BFC8B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 58CCF1DC2D5EBC2E00BFC8B0 /* Project object */;
+}
