@@ -1,5 +1,5 @@
 //
-//  FixturesViewController.swift
+//  CompetitionTableViewController.swift
 //  FootballFixture
 //
 //  Created by Sharon Omoyeni Babatunde on 14/02/2025.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-class FixturesViewController: UIViewController {
+class CompetitionTableViewController: UIViewController {
     
-    private let layout = FixturesLayout()
+    lazy var layout = CompetitionTableLayout()
     private var viewModel: FixtureViewModelDelegate = FixtureViewModel()
     
     override func viewDidLoad() {
@@ -28,20 +28,23 @@ class FixturesViewController: UIViewController {
     }
 }
 
-extension FixturesViewController: UITableViewDelegate, UITableViewDataSource {
+extension CompetitionTableViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.fixtures.count
+        return viewModel.standings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: FixtureTableViewCell.identifier, for: indexPath) as? FixtureTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: StandingsTableViewCell.identifier, for: indexPath) as? StandingsTableViewCell else {
             return UITableViewCell()
         }
-        cell.configure(with: viewModel.fixtures[indexPath.row])
+        let standing = viewModel.standings[indexPath.row]
+        cell.configure(with: standing)
+        cell.selectionStyle = .none
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+        return 44
     }
 }

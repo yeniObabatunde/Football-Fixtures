@@ -17,20 +17,23 @@ class TabBarController: UITabBarController {
     
     private func setupViewControllers() {
         let fixturesVC = FixturesViewController()
-        fixturesVC.tabBarItem = UITabBarItem(
+        fixturesVC.title = "Today's Fixtures"
+        let fixturesNav = UINavigationController(rootViewController: fixturesVC)
+        fixturesNav.tabBarItem = UITabBarItem(
             title: nil,
             image: UIImage(systemName: "soccerball"),
             selectedImage: UIImage(systemName: "soccerball.fill")
         )
         
-        let fieldVC = FieldViewController()
-        fieldVC.tabBarItem = UITabBarItem(
+        let fieldVC = CompetitonViewController()
+        fieldVC.title = "Competitions"
+        let fieldNav = UINavigationController(rootViewController: fieldVC)
+        fieldNav.tabBarItem = UITabBarItem(
             title: nil,
             image: UIImage(systemName: "sportscourt"),
             selectedImage: UIImage(systemName: "sportscourt.fill")
         )
-        
-        viewControllers = [fixturesVC, fieldVC]
+        viewControllers = [fixturesNav, fieldNav]
     }
     
     private func setupTabBarAppearance() {

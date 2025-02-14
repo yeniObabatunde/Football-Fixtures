@@ -15,22 +15,22 @@ class FixtureTableViewCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "TIMED"
-        label.font = .systemFont(ofSize: 12)
-        label.textColor = .gray
+        label.font = .boldSystemFont(ofSize: 12)
+        label.textColor = .black
         return label
     }()
     
     private let timeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 14, weight: .medium)
+        label.font = .systemFont(ofSize: 20, weight: .bold)
         return label
     }()
     
     private let matchIdLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 12)
+        label.font = .boldSystemFont(ofSize: 12)
         label.textColor = .gray
         return label
     }()
@@ -38,21 +38,23 @@ class FixtureTableViewCell: UITableViewCell {
     private let homeTeamLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 14)
+        label.font = .boldSystemFont(ofSize: 14)
+        label.textColor = .black
         return label
     }()
     
     private let awayTeamLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 14)
+        label.font = .boldSystemFont(ofSize: 14)
+        label.textColor = .black
         return label
     }()
     
     private let homeScoreLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 14, weight: .medium)
+        label.font = .systemFont(ofSize: 17, weight: .bold)
         label.textAlignment = .right
         return label
     }()
@@ -60,7 +62,7 @@ class FixtureTableViewCell: UITableViewCell {
     private let awayScoreLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 14, weight: .medium)
+        label.font = .systemFont(ofSize: 17, weight: .bold)
         label.textAlignment = .right
         return label
     }()
@@ -68,7 +70,7 @@ class FixtureTableViewCell: UITableViewCell {
     private let durationLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 12)
+        label.font = .boldSystemFont(ofSize: 13)
         label.textColor = .gray
         label.textAlignment = .right
         return label
@@ -131,5 +133,3 @@ class FixtureTableViewCell: UITableViewCell {
         durationLabel.text = fixture.homeTime
     }
 }
-
-    
