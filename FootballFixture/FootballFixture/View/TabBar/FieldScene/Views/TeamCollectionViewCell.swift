@@ -29,6 +29,14 @@ class TeamCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
+    lazy var imageLoadingIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(style: .large)
+        indicator.hidesWhenStopped = true
+        indicator.color = .white
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        return indicator
+    }()
+    
     private let nameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -50,6 +58,7 @@ class TeamCollectionViewCell: UICollectionViewCell {
     private func setupUI() {
         contentView.addSubview(containerView)
         containerView.addSubview(logoImageView)
+        logoImageView.addSubview(imageLoadingIndicator)
         containerView.addSubview(nameLabel)
         
         NSLayoutConstraint.activate([
@@ -63,6 +72,9 @@ class TeamCollectionViewCell: UICollectionViewCell {
             logoImageView.widthAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 0.6),
             logoImageView.heightAnchor.constraint(equalTo: logoImageView.widthAnchor),
             
+            imageLoadingIndicator.centerXAnchor.constraint(equalTo: logoImageView.centerXAnchor),
+            imageLoadingIndicator.centerYAnchor.constraint(equalTo: logoImageView.centerYAnchor),
+            
             nameLabel.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 8),
             nameLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 8),
             nameLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -8),
@@ -70,9 +82,40 @@ class TeamCollectionViewCell: UICollectionViewCell {
         ])
     }
     
-    func configure(with team: Team) {
-        logoImageView.image = UIImage(named: team.logoName) ?? UIImage(systemName: "soccerball")
+    func configure(with team: TeamsTeam) {
+       
         nameLabel.text = team.name
+        if let url = URL(string: team.crest ?? "") {
+            loadCachedImage(from: url)
+        } else {
+            DispatchQueue.main.async { [weak self] in
+                self?.logoImageView.image = UIImage(systemName: "soccerball")
+            }
+        }
+    }
+    
+    private func loadCachedImage(from url: URL?) {
+        guard let url = url else { return }
+       imageLoadingIndicator.startAnimating()
+        Task {
+            do {
+                let image = try await ImageLoadingService.shared.loadImage(from: url)
+                await MainActor.run {
+                    UIView.transition(with: logoImageView,
+                                      duration: 0.3,
+                                      options: .transitionCrossDissolve) { [weak self] in
+                        self?.logoImageView.image = image
+                        self?.imageLoadingIndicator.stopAnimating()
+                    }
+                }
+            } catch {
+                
+                await MainActor.run { [weak self] in
+                    self?.logoImageView.image = UIImage(named: "soccerball")
+                    self?.imageLoadingIndicator.stopAnimating()
+                }
+            }
+        }
     }
 }
 

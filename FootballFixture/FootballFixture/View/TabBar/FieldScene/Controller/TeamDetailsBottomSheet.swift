@@ -8,15 +8,16 @@
 import UIKit
 
 class TeamDetailsBottomSheet: UIViewController {
-
-    private let team: Team
-    private var players: [Player] = []
-    private lazy var detailsView = TeamDetailsLayout()
-    private var viewModel: FixtureViewModelDelegate = FixtureViewModel()
     
-    init(team: Team) {
+    private lazy var detailsView = TeamDetailsLayout()
+    private let team: TeamsTeam
+    private var players: [Squad]
+    
+    private var viewModel: FixtureViewModelDelegate = FixtureViewModel(serviceDI: ServiceDIContainer.shared)
+    
+    init(team: TeamsTeam, players: [Squad]) {
         self.team = team
-        self.players = viewModel.players
+        self.players = players
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -56,11 +57,9 @@ extension TeamDetailsBottomSheet: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PlayerTableViewCell.identifier, for: indexPath) as? PlayerTableViewCell else {
             return UITableViewCell()
         }
-        
         let player = players[indexPath.row]
-        cell.configure(with: player)
+        cell.configure(with: player, index: indexPath.row)
         cell.selectionStyle = .none
-        
         return cell
     }
     

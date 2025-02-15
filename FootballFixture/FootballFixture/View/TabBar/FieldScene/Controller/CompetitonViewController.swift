@@ -7,14 +7,15 @@
 
 import UIKit
 
-class CompetitonViewController: UIViewController {
+class CompetitonViewController: BaseViewController {
     
     private let layout = FieldLayout()
-    private var viewModel: FixtureViewModelDelegate = FixtureViewModel()
+    private var viewModel: FixtureViewModelDelegate = FixtureViewModel(serviceDI: ServiceDIContainer.shared)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        viewModel.getCompetitioList()
     }
     
     override func loadView() {
@@ -25,7 +26,32 @@ class CompetitonViewController: UIViewController {
         view.backgroundColor = .white
         layout.tableView.delegate = self
         layout.tableView.dataSource = self
+        layout.tableView.refreshControl = refreshControl
     }
+    
+    override func refreshData() {
+        viewModel.getCompetitioList()
+           DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+               self.refreshControl.endRefreshing()
+           }
+       }
+    
+    override func bindViewModel() {
+        viewModel.showLoader = { [weak self] isLoading in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.showLoader(isLoading)
+                if !isLoading {
+                    self.layout.tableView.reloadData()
+                }
+            }
+        }
+        viewModel.errorMessage = { [weak self] errorMessage in
+            guard let self = self else { return }
+            showError(message: errorMessage)
+        }
+    }
+    
 }
 
 extension CompetitonViewController: UITableViewDelegate, UITableViewDataSource {
@@ -38,7 +64,7 @@ extension CompetitonViewController: UITableViewDelegate, UITableViewDataSource {
        
         let competition = viewModel.competitions[indexPath.row]
         var config = cell.defaultContentConfiguration()
-        config.text = competition
+        config.text = competition.name
         config.textProperties.font = .boldSystemFont(ofSize: 16)
         cell.contentConfiguration = config
         cell.accessoryType = .disclosureIndicator

@@ -9,6 +9,7 @@ import UIKit
 
 class FixtureTableViewCell: UITableViewCell {
     
+    let matchStatusUpdater = MatchStatusUpdater()
     static let identifier: String = "FixtureTableViewCell"
     
     private let statusLabel: UILabel = {
@@ -54,7 +55,7 @@ class FixtureTableViewCell: UITableViewCell {
     private let homeScoreLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 17, weight: .bold)
+        label.font = .systemFont(ofSize: 20, weight: .bold)
         label.textAlignment = .right
         return label
     }()
@@ -62,12 +63,12 @@ class FixtureTableViewCell: UITableViewCell {
     private let awayScoreLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 17, weight: .bold)
+        label.font = .systemFont(ofSize: 20, weight: .bold)
         label.textAlignment = .right
         return label
     }()
     
-    private let durationLabel: UILabel = {
+    let durationLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .boldSystemFont(ofSize: 13)
@@ -116,20 +117,28 @@ class FixtureTableViewCell: UITableViewCell {
             awayScoreLabel.trailingAnchor.constraint(equalTo: homeScoreLabel.trailingAnchor),
             awayScoreLabel.widthAnchor.constraint(equalToConstant: 30),
             
-            durationLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            durationLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -5),
             durationLabel.trailingAnchor.constraint(equalTo: homeScoreLabel.leadingAnchor, constant: -4),
-            durationLabel.widthAnchor.constraint(equalToConstant: 30),
             
         ])
     }
     
-    func configure(with fixture: Fixture) {
-        timeLabel.text = fixture.time
-        matchIdLabel.text = fixture.matchId
-        homeTeamLabel.text = fixture.homeTeam
-        awayTeamLabel.text = fixture.awayTeam
-        homeScoreLabel.text = String(fixture.homeScore)
-        awayScoreLabel.text = String(fixture.awayScore)
-        durationLabel.text = fixture.homeTime
+    func configure(with fixture: MatchModel) {
+        timeLabel.text = "".convertToUserLocalTime(utcTime: fixture.utcDate ?? "")
+        matchIdLabel.text = fixture.area?.code
+        homeTeamLabel.text = fixture.homeTeam?.shortName
+        awayTeamLabel.text = fixture.awayTeam?.shortName
+        homeScoreLabel.text = String(fixture.score?.fullTime?.away ?? 0)
+        awayScoreLabel.text = String(fixture.score?.fullTime?.away ?? 0)
+        
+        matchStatusUpdater.getMatchStatus(utcDate: fixture.utcDate ?? "", status: fixture.status ?? "", duration: fixture.score?.duration ?? "") { [weak self] timeString in
+            DispatchQueue.main.async {
+                self?.durationLabel.text =  timeString
+                print("Live Match Time: \(timeString)")
+            }
+        }
+        
     }
+    
 }
+

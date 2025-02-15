@@ -7,26 +7,26 @@
 
 import UIKit
 
-final class CompetitionDetailViewController: UIViewController {
+final class CompetitionDetailViewController: BaseViewController {
     
-    private let competitionName: String
+    private let competitionItem: Competition
     private lazy var detailView = CompetitionDetailLayout()
     
-    private lazy var tableViewController = CompetitionTableViewController()
+    private lazy var tableViewController = CompetitionTableViewController(competitionName: competitionItem)
     private lazy var fixturesViewController = CompetitionFixturesViewController()
-    private lazy var teamsViewController = CompetitionTeamsViewController()
+    private lazy var teamsViewController = CompetitionTeamsViewController(competitionName: competitionItem)
     
     private var currentViewController: UIViewController?
     
-    init(competitionName: String) {
-        self.competitionName = competitionName
+    init(competitionName: Competition) {
+        self.competitionItem = competitionName
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     override func loadView() {
         view = detailView
     }
@@ -34,6 +34,10 @@ final class CompetitionDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewController()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
@@ -41,19 +45,19 @@ final class CompetitionDetailViewController: UIViewController {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
-
+    
     private func setupViewController() {
         detailView.delegate = self
-        detailView.configure(with: competitionName)
+        detailView.configure(with: competitionItem.name ?? "")
         showViewController(tableViewController)
     }
     
     private func showViewController(_ viewController: UIViewController) {
-
+        
         currentViewController?.willMove(toParent: nil)
         currentViewController?.view.removeFromSuperview()
         currentViewController?.removeFromParent()
-
+        
         addChild(viewController)
         detailView.setContent(viewController.view)
         viewController.didMove(toParent: self)

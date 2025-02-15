@@ -62,8 +62,8 @@ class PlayerTableViewCell: UITableViewCell {
         ])
     }
     
-    func configure(with player: Player) {
-        numberLabel.text = "\(player.number)"
+    func configure(with player: Squad, index: Int) {
+        numberLabel.text = "\(index + 1)"
         nameLabel.text = player.name
         positionLabel.text = player.position
     }
